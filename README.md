@@ -2,6 +2,8 @@
 
 #### _This is a childrens application that allows the user to input a word he or she doesn't know, and then provide their own multiple definitions of the word._
 
+## _View on Heroku:_ (https://ancient-shore-39450.herokuapp.com/)
+
 #### By _**Aaron Rohrbacher**_
 
 ## _Specifications:_
