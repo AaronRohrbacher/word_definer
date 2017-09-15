@@ -20,3 +20,25 @@ describe('the path to a word with definitions', {:type => :feature}) do
     expect(page).to have_content('123')
   end
 end
+
+describe('path to add word and definition, specific to each word', {:type => :feature}) do
+  before() do
+    Word.clear
+    Define.clear
+  end
+  it('shows a definition for specific words only') do
+    visit('/')
+    fill_in('word_input', :with => 'abc')
+    click_button('Submit')
+
+    fill_in('word_input', :with => 'def')
+    click_button('Submit')
+
+    click_link('abc')
+
+    fill_in('definition_input', :with => '123')
+    click_button('Submit')
+
+    expect(page).to have_content('123')
+  end
+end
