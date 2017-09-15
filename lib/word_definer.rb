@@ -12,6 +12,10 @@ class Word
     @@list
   end
 
+  def self.clear
+    @@list = []
+  end
+
   def save()
     @@list.push(self)
   end

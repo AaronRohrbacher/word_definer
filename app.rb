@@ -2,8 +2,8 @@ require('sinatra')
 require('sinatra/reloader')
 also_reload('lib/**/*.rb')
 require('./lib/word_definer')
-require('pry')
-require('capybara')
+# require('pry')
+# require('capybara')
 
 get('/') do
   @list = Word.all()

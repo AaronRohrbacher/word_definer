@@ -8,8 +8,6 @@ describe('the path to a list of words', {:type => :feature}) do
     visit('/')
     fill_in('word_input', :with => 'abc')
     click_button('Submit')
-
     expect(page).to have_content('abc')
-    save_and_open_page
-    end
   end
+end
