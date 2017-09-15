@@ -4,8 +4,9 @@ require('pry')
 
 describe('Word#list') do
   it('Adds inputted words to a list') do
-    word = Word.new({:word=>"Contatenate"})
+    word = Word.new({:word=>"Concatenate"})
     @list = Word.all()
-    expect(@list[0]).to eq("Concatenate")
+    word.save()
+    expect(@list[0].word).to eq("Concatenate")
   end
 end
