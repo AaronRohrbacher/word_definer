@@ -1,18 +1,18 @@
 <div class = "jumbotron">
-<h3>What do <em>YOU</em> think <%= @word_display.word %> means?</h3>
-<p>After you enter your definition, have your friends do it too, then we can compare!</p>
+  <h3>What do <em>YOU</em> think "<%= @word_display.word %>" means?</h3>
+  <p>After you enter your definition, have your friends do it too, then we can compare!</p>
 
-<form action = "/define/<%= @id %>" method = "post">
-  <input type = "text" name = "definition_input">
-  <button class = "btn btn-success" type = "submit">Submit</button>
-</form>
+  <form action = "/define/<%= @id %>" method = "post">
+    <input type = "text" name = "definition_input">
+    <button class = "btn btn-success" type = "submit">Submit</button>
+  </form>
 </div>
 
 <% definition_display_number = 0 %>
 <% @definition_list.each do |definitions| %>
-<% if @id == definitions.word_id %>
-<% definition_display_number += 1 %>
-<p>Definition <%= definition_display_number %>: <%= definitions.definition %></p>
-<% end %>
+  <% if @id == definitions.word_id %>
+  <% definition_display_number += 1 %>
+  <p>Definition <%= definition_display_number %>: <%= definitions.definition %></p>
+  <% end %>
 <% end %>
 <p class = "btn btn-success buttonLink"><a href = "/">See or add more words!</a></p>
