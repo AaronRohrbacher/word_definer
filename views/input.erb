@@ -1,8 +1,18 @@
-<% @list.each do |words| %>
-<p><a href = "/define/<%= words.id %>"><%= words.word %></a></p>
-<% end %>
-
+<div class = "jumbotron">
+<h1>What's THAT word?!?!</h1>
+<h3><em><strong>Hey, kids!</em></strong></h3>
+<p>If you don't know what a word means, enter it here! Then, you can tell us what <em><strong>YOU</em></strong> think it means! Add as many words as you'd like.</p>
 <form action = "/" method = "post">
   <input type = "text" name = "word_input">
   <button class="btn" type="submit">Submit</button>
 </form>
+</div>
+
+<% if @show_on_click %>
+<h3><em><strong>Great!</em></strong></h3>
+<p>Now, you can click on any of your unknown words, and tell us what <em><strong>YOU</em></strong> think it means!</p>
+<% end %>
+
+<% @list.each do |words| %>
+<p><a href = "/define/<%= words.id %>"><%= words.word %></a></p>
+<% end %>

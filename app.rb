@@ -14,6 +14,7 @@ post('/') do
   new_word = Word.new({:word => word_input})
   new_word.save()
   @list = Word.all()
+  @show_on_click = true
   erb(:input)
 end
 
