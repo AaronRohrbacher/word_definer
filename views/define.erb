@@ -1,0 +1,11 @@
+<%= @word_display.word %>
+<% @definition_list.each do |definitions| %>
+<% if @id == definitions.word_id %>
+<p><%= definitions.definition %></p>
+<% end %>
+<% end %>
+
+<form action = "/define/<%= @id %>" method = "post">
+  <input type = "text" name = "definition_input">
+  <button type = "submit">Submit</button>
+</form>

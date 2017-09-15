@@ -1,8 +1,8 @@
 <% @list.each do |words| %>
-<p><%= words.word %></p>
+<p><a href = "/define/<%= words.id %>"><%= words.word %></a></p>
 <% end %>
 
 <form action = "/" method = "post">
   <input type = "text" name = "word_input">
-  <button type="submit" class="btn">Submit</button>
+  <button class="btn" type="submit">Submit</button>
 </form>
