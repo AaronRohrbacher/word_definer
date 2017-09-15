@@ -4,7 +4,7 @@
 
 <form action = "/define/<%= @id %>" method = "post">
   <input type = "text" name = "definition_input">
-  <button type = "submit">Submit</button>
+  <button class = "btn btn-success" type = "submit">Submit</button>
 </form>
 </div>
 
@@ -15,4 +15,4 @@
 <p>Definition <%= definition_display_number %>: <%= definitions.definition %></p>
 <% end %>
 <% end %>
-<p class = "btn btn-success"><a href = "/">See or add more words!</a></p>
+<p class = "btn btn-success buttonLink"><a href = "/">See or add more words!</a></p>

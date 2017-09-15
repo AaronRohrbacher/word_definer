@@ -1,0 +1,14 @@
+.jumbotron {
+  background-color: #563184;
+  color: white;
+  text-align: center;
+}
+
+.bookwormFont {
+  font-family: bookworm
+}
+
+.buttonLink a{
+  text-decoration: none;
+  color: white;
+}
